@@ -1,0 +1,65 @@
+const projects = [
+  {
+    id: 1,
+    title: 'Real estate Wordpress website',
+    description: 'Open Classrooms project for which I designed and built a Wordpress website for an imaginary real estate agency in Aspen based on a brief with specific requirements.',
+    skills: ['Wordpress', 'HTML', 'CSS', 'User documentation writing'],
+    image: '../assets/images/projects/wordpress.png',
+    githubUrl: 'https://github.com/NicoleAMS/chalets-and-caviar',
+    liveUrl: 'http://dev-chalets-and-caviar-oc.pantheonsite.io/' 
+  },
+  {
+    id: 2,
+    title: 'Outdoor cinema event website',
+    description: 'Open Classrooms project for which I designed and built a prototype website for an imaginary outdoor film festival, based on a brief with specific requirements.',
+    skills: ['SCSS', 'Bootstrap 4', 'Gulp', 'Project brief writing'],
+    image: '../assets/images/projects/cinema.png',
+    githubUrl: 'https://github.com/NicoleAMS/outdoor_cinema_event_website',
+    liveUrl: 'https://nicoleams.github.io/outdoor_cinema_event_website/src/index.html' 
+  },
+  {
+    id: 3,
+    title: 'Quote generator',
+    description: 'Quote generator with seasonal quotes. Each quote consists of 3 parts that are randomly chosen from a list of possibilities. The user can choose between 1 and 5 quotes (all different). Open Classrooms project.',
+    skills: ['CSS', 'Bootstrap 4', 'JavaScript'],
+    image: '../assets/images/projects/quotegen.png',
+    githubUrl: 'https://github.com/NicoleAMS/quote_generator',
+    liveUrl: 'https://nicoleams.github.io/quote_generator/' 
+  },
+  {
+    id: 4,
+    title: 'Board game',
+    description: 'Object-oriented JS turn-based board game, based on a requirements brief by Open Classrooms. I chose the cartoon Winx Club as its theme.',
+    skills: ['CSS', 'JavaScript', 'OOP', 'jQuery'],
+    image: '../assets/images/projects/game.png',
+    githubUrl: 'https://github.com/NicoleAMS/board_game',
+    liveUrl: 'https://nicoleams.github.io/board_game/' 
+  },
+  {
+    id: 5,
+    title: 'Restaurant Review SPA',
+    description: 'A single page application built with Web Components that shows restaurants in your area and their reviews. Uses Google Maps and Google Places APIs, but users can also add restaurants and reviews. Open Classrooms project',
+    skills: ['CSS', 'Bootstrap 4', 'JavaScript', 'OOP', 'Web Components', 'Google APIs'],
+    image: './assets/images/projects/restraurant-review.png',
+    githubUrl: 'https://github.com/NicoleAMS/restaurant_review',
+    liveUrl: '' 
+  },
+  {
+    id: 6,
+    title: 'Database design',
+    description: 'UML class diagram and mySQL database for an imaginary food delivery site, based on a brief by Open Classrooms.',
+    skills: ['database design', 'UML', 'SQL', 'MySQL'],
+    image: '../assets/images/projects/uml.png',
+    githubUrl: 'https://github.com/NicoleAMS/express_food_sql_db_uml',
+    liveUrl: '' 
+  },
+  {
+    id: 7,
+    title: 'Enhance existing codebase',
+    description: 'Open Classrooms project in which I had to take over an existing codebase (a TODO list app) and fix bugs, optimise loops, add missing Jasmine tests, write technical documentation and conduct a competitor performance analysis.',
+    skills: ['javascript', 'bug-fixing', 'jasmine', 'technical documentation', 'performance analysis'],
+    image: '../assets/images/projects/jasmine-test.png',
+    githubUrl: 'https://github.com/NicoleAMS/enhance-project',
+    liveUrl: ''
+  }
+];
