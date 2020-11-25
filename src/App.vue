@@ -14,20 +14,18 @@ import Homepage from "./views/Homepage.vue";
 export default {
   name: "App",
   components: {
-    Header, 
+    Header,
     Footer,
-    Homepage
-  }
+    Homepage,
+  },
 };
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&family=Titillium+Web:wght@700&display=swap");
+
+* {
+  margin: 0;
+  color: white;
 }
 </style>

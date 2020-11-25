@@ -1,13 +1,11 @@
 <template>
-  <h2>Header Component</h2>
+  <div class="header-container">
+    <!-- <h2>Header Component</h2> -->
+  </div>
 </template>
 
 <script>
-export default {
-  
-}
+export default {};
 </script>
 
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>

@@ -1,6 +1,6 @@
 <template>
   <div id="homepage-container">
-    <h1>Homepage Component</h1>
+    <!-- <h1>Homepage Component</h1> -->
     <Intro />
     <About />
     <Portfolio />
@@ -19,7 +19,7 @@ export default {
     Intro,
     About,
     Portfolio,
-    Contact
-  }
+    Contact,
+  },
 };
 </script>
