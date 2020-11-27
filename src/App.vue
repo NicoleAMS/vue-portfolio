@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Russo+One&family=Titillium+Web:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&family=Scope+One&family=Titillium+Web:wght@700&display=swap");
 
 * {
   margin: 0;
