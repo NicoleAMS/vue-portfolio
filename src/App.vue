@@ -23,9 +23,16 @@ export default {
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Russo+One&family=Scope+One&family=Titillium+Web:wght@700&display=swap");
+$dark: #081626;
+$white: #F1F7F3;
 
 * {
   margin: 0;
-  color: white;
+  color: $white;
 }
+
+body {
+  background: $dark;
+}
+
 </style>
