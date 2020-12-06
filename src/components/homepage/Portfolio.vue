@@ -24,7 +24,6 @@
         :link="project.liveUrl"
       />
     </div>
-    <hr />
   </div>
 </template>
 
@@ -58,7 +57,7 @@ $dark: #081626;
 $white: #f1f7f3;
 
 #portfolio-container {
-  padding-top: 50px;
+  padding: 50px 0;
   background-color: $white;
 
   .projects-container {
