@@ -24,7 +24,8 @@ export default {
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Russo+One&family=Scope+One&family=Titillium+Web:wght@700&display=swap");
 $dark: #081626;
-$white: #F1F7F3;
+$white: #f1f7f3;
+$orange: #ffa46b;
 
 * {
   margin: 0;
@@ -35,4 +36,42 @@ body {
   background: $dark;
 }
 
+h2 {
+  font-family: "Titillium Web", sans-serif;
+}
+
+p {
+  font-family: "Scope One", serif;
+  font-size: 18px;
+}
+
+button {
+  width: fit-content;
+  margin-top: 30px;
+  background-color: $orange;
+  border: none;
+  font-size: 18px;
+  font-family: "Titillium Web", sans-serif;
+  text-transform: uppercase;
+  &:hover {
+    background-color: $dark;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.section-title {
+  font-size: 70px;
+  text-transform: uppercase;
+
+  @media screen and (max-width: 768px) {
+    font-size: 58px;
+  }
+
+  @media screen and (max-width: 425px) {
+    font-size: 12vw;
+  }
+}
 </style>

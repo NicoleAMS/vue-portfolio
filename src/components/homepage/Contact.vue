@@ -7,7 +7,7 @@
 
       <div class="contact-right">
         <div class="contact-text">
-          <h2>Get in touch</h2>
+          <h2 class="section-title">Get in touch</h2>
           <div class="line"></div>
           <p>
             If you like my portfolio and are interested to find out more about
@@ -141,15 +141,10 @@ $white: #f1f7f3;
   }
 
   h2 {
-    font-family: "Titillium Web", sans-serif;
-    font-size: 70px;
-    text-transform: uppercase;
     text-align: right;
   }
 
   p {
-    font-family: "Scope One", serif;
-    font-size: 18px;
     width: 85%;
     position: relative;
     left: 15%;

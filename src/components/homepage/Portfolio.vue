@@ -1,17 +1,20 @@
 <template>
   <div id="portfolio-container">
-    <h2>My Portfolio</h2>
+    <h2 class="section-title">My Portfolio</h2>
     <div class="line"></div>
-    <div class="technology-types">
-      <!-- <ul>
+    <p class="portfolio-help">
+      Hover over or tap the projects to find out more about them.
+    </p>
+    <!-- <div class="technology-types">
+      <ul>
         <li class="active">All</li>
         <li>Wordpress</li>
         <li>CSS / SCSS</li>
         <li>Bootstrap</li>
         <li>JavaScript</li>
         <li>Web Components</li>
-      </ul> -->
-    </div>
+      </ul>
+    </div> -->
     <div class="projects-container">
       <ProjectCard
         v-for="project in projects"
@@ -34,11 +37,11 @@ import jsonData from "../../data/projects.json";
 export default {
   name: "Portfolio",
   components: {
-    ProjectCard
+    ProjectCard,
   },
   data() {
     return {
-      projects: []
+      projects: [],
     };
   },
   mounted() {
@@ -57,30 +60,42 @@ $dark: #081626;
 $white: #f1f7f3;
 
 #portfolio-container {
-  padding: 50px 0;
+  padding: 100px 0 120px 0;
   background-color: $white;
 
   .projects-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 50px;
+    margin: 30px auto 0 auto;
   }
 
   h2 {
-    font-family: "Titillium Web", sans-serif;
-    font-size: 70px;
-    text-transform: uppercase;
     text-align: center;
     color: $dark;
+
+    @media screen and (max-width: 768px) {
+      font-size: 58px;
+    }
+
+    @media screen and (max-width: 425px) {
+      font-size: 12vw;
+    }
   }
 
   h3 {
-    color: $midnight;
+    color: $dark;
+  }
+
+  .portfolio-help {
+    color: $dark;
+    text-align: center;
+    margin: 30px 15px;
   }
 
   .line {
     width: 35%;
+    min-width: 200px;
     height: 10px;
     background-color: $aqua;
     margin-bottom: 25px;
@@ -97,7 +112,7 @@ $white: #f1f7f3;
       justify-content: space-around;
     }
     li {
-      color: $midnight;
+      color: $dark;
       display: inline;
       text-transform: uppercase;
       font-size: 20px;

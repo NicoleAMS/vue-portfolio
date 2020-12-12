@@ -54,21 +54,23 @@ $white: #f1f7f3;
 .project-card {
   width: 500px;
   height: 300px;
-  margin: 2px;
+  margin: 5px;
   background-size: cover;
   background-position: center;
   font-family: "Scope One", serif;
   font-size: 14px;
 
+  @media screen and (max-width: 768px) {
+    width: 90%;
+    height: 350px;
+    min-width: 240px;
+    max-width: 500px;
+  }
+
   .overlay {
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-      180deg,
-      #000 0%,
-      #00091a 20%,
-      #325a65 100%
-    );
+    background: linear-gradient(180deg, #000 0%, #00091a 20%, #325a65 100%);
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -80,9 +82,14 @@ $white: #f1f7f3;
       font-family: "Titillium Web", sans-serif;
       font-size: 28px;
       margin: 5px 15px;
+
+      @media screen and (max-width: 375px) {
+        font-size: 24px;
+      }
     }
 
     p {
+      font-size: 14px;
       color: $white;
       margin: 0 15px;
     }
@@ -121,6 +128,11 @@ $white: #f1f7f3;
 
       a {
         text-decoration: none;
+      }
+
+      @media screen and (max-width: 375px) {
+        font-size: 12px;
+        margin: 15px 10px 15px 0;
       }
     }
   }

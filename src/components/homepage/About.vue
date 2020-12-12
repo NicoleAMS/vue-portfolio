@@ -7,15 +7,16 @@
 
       <div class="about-right">
         <div class="about-text">
-          <h2>About me</h2>
+          <h2 class="section-title">About me</h2>
           <div class="line"></div>
           <p>
-            Junior frontend developer with 9 months of work experience in both
-            front-end and full-stack development and an HBO-level diploma in
-            Software Development (front-end focus). Loves learning,
-            brainstorming, teamwork and a good cup of tea.
+            Hi and thanks for stopping by! I'm a Dutch junior frontend developer
+            with 9 months of international work experience in both front-end and
+            full-stack development and an HBO-level diploma in Software
+            Development (front-end focus). I love learning, brainstorming and
+            teamwork.
           </p>
-          <button><a href="#">Download CV</a></button>
+          <button><a href="#">Download my CV</a></button>
         </div>
       </div>
     </div>
@@ -34,12 +35,7 @@ $lightgrey: #c4beb5;
 $midnight: #010a1c;
 
 #about-container {
-  padding: 50px 0;
-  height: 80vh;
-
-  @media screen and (max-width: 1200px) {
-    background: $midnight;
-  }
+  height: 100vh;
 
   @media screen and (max-width: 768px) {
     height: auto;
@@ -126,34 +122,12 @@ $midnight: #010a1c;
     margin-bottom: 25px;
   }
 
-  h2 {
-    font-family: "Titillium Web", sans-serif;
-    font-size: 70px;
-    text-transform: uppercase;
-  }
-
   p {
-    font-family: "Scope One", serif;
-    font-size: 18px;
     width: 85%;
   }
 
   button {
-    width: fit-content;
-    margin-top: 30px;
-    background-color: $orange;
-    border: none;
     padding: 15px 30px;
-    font-size: 18px;
-    font-family: "Titillium Web", sans-serif;
-    text-transform: uppercase;
-    &:hover {
-      background-color: $midnight;
-    }
-
-    a {
-      text-decoration: none;
-    }
   }
 }
 </style>

@@ -44,36 +44,21 @@ $white: #f1f7f3;
     }
 
     h2 {
-      font-family: "Titillium Web", sans-serif;
       font-size: 40px;
       width: 70%;
       padding: 25px 40px;
       background-color: $aqua;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 650px) {
         font-size: 6vw;
         padding: 15px 25px;
       }
     }
 
     button {
-      width: fit-content;
-      margin-top: 30px;
-      background-color: $orange;
-      border: none;
       padding: 20px 45px;
-      font-size: 20px;
-      font-family: "Titillium Web", sans-serif;
-      text-transform: uppercase;
-      &:hover {
-        background-color: $dark;
-      }
 
-      a {
-        text-decoration: none;
-      }
-
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 600px) {
         font-size: 4vw;
         padding: 15px 25px;
       }
