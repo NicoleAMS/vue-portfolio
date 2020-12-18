@@ -3,7 +3,7 @@
     <div class="intro-text">
       <h1>Nicole Sentis</h1>
       <h2>Frontend Developer</h2>
-      <button><a href="#">View my work</a></button>
+      <button><a href="#portfolio-container">View my work</a></button>
     </div>
   </div>
 </template>

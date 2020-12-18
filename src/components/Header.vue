@@ -1,11 +1,192 @@
 <template>
   <div class="header-container">
-    <!-- <h2>Header Component</h2> -->
+    <nav class="capital desktop">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about-container">About Me</a></li>
+        <li><a href="#portfolio-container">Portfolio</a></li>
+        <li><a href="#contact-container">Contact</a></li>
+      </ul>
+    </nav>
+    <nav class="capital mobile">
+      <div class="icon" @click="toggleMenu()" :class="{open: openClass}">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul :class="{'menu-overlay': menuOverlay}" v-if="openClass" @click="toggleMenu()">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about-container">About Me</a></li>
+        <li><a href="#portfolio-container">Portfolio</a></li>
+        <li><a href="#contact-container">Contact</a></li>
+      </ul>
+    </nav>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "Header",
+  data() {
+    return {
+      openClass: false,
+      menuOverlay: false
+    }
+  },
+  methods: {
+    toggleMenu: function() {
+      this.openClass = !this.openClass;
+      this.menuOverlay = !this.menuOverlay;
+    }
+  }
+};
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+$dark: #081626;
+$white: #f1f7f3;
+$orange: #ffa46b;
+$aqua: #3c95a8;
+
+.header-container {
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: $dark;
+  z-index: 100;
+
+  ul {
+    display: flex;
+    width: 400px;
+    justify-content: space-around;
+  }
+
+  li {
+    display: inline;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+
+  a {
+    text-decoration: none;
+    &:hover, &:active {
+      color: $orange;
+    }
+
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .desktop {
+      display: none;
+    }
+
+    .mobile {
+      display: block;
+    }
+
+    nav {
+      padding-right: 50px;
+    }
+
+    .icon {
+      width: 30px;
+      height: 20px;
+      position: relative;
+      left: 100%;
+      z-index: 10;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: 0.5s ease-in-out;
+      -moz-transition: 0.5s ease-in-out;
+      -o-transition: 0.5s ease-in-out;
+      transition: 0.5s ease-in-out;
+      cursor: pointer;
+    }
+
+    .icon span {
+      display: block;
+      position: absolute;
+      height: 4px;
+      width: 100%;
+      background: $orange;
+      opacity: 1;
+      left: 0;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: 0.25s ease-in-out;
+      -moz-transition: 0.25s ease-in-out;
+      -o-transition: 0.25s ease-in-out;
+      transition: 0.25s ease-in-out;
+    }
+
+    .icon span:nth-child(1) {
+      top: 0px;
+    }
+
+    .icon span:nth-child(2),
+    .icon span:nth-child(3) {
+      top: 10px;
+    }
+
+    .icon span:nth-child(4) {
+      top: 20px;
+    }
+
+    .icon.open span:nth-child(1),
+    .icon.open span:nth-child(4) {
+      top: 10px;
+      width: 0;
+      left: 50%;
+    }
+
+    .icon.open span:nth-child(2) {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      background: #ffffff;
+    }
+
+    .icon.open span:nth-child(3) {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      background: #ffffff;
+    }
+  }
+
+  .menu-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
+    width: unquote("min(400px, 80%)");
+    right: 0;
+    top: 0;
+    position: fixed;
+    background-color: $aqua;
+    color: white;
+    box-shadow: -10px 0px 30px -15px $dark;
+
+    li {
+    display: block;
+    font-size: 22px;
+    position: relative;
+    text-align: center;
+    }
+  }
+}
+</style>

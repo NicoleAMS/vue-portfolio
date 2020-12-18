@@ -17,7 +17,7 @@ export default {
     Header,
     Footer,
     Homepage,
-  },
+  }
 };
 </script>
 
@@ -36,7 +36,7 @@ body {
   background: $dark;
 }
 
-h2 {
+h2, li {
   font-family: "Titillium Web", sans-serif;
 }
 
