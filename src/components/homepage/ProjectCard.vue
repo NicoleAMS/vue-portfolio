@@ -12,12 +12,8 @@
         <li v-for="skill in skills" :key="skill">{{ skill }}</li>
       </ul>
       <div class="overlay-buttons">
-        <button v-if="github !== ''">
-          <a :href="`${github}`">View on GitHub</a>
-        </button>
-        <button v-if="link !== ''">
-          <a :href="`${link}`">View live site</a>
-        </button>
+        <a v-if="github !== ''" :href="`${github}`">View on GitHub</a>
+        <a v-if="link !== ''" :href="`${link}`">View live site</a>
       </div>
     </div>
   </div>
@@ -112,7 +108,7 @@ $white: #f1f7f3;
       justify-content: flex-end;
     }
 
-    button {
+    a {
       width: fit-content;
       background-color: $aqua;
       border: none;
@@ -122,12 +118,9 @@ $white: #f1f7f3;
       text-transform: uppercase;
       display: inline;
       margin: 15px 15px 15px 0;
+      text-decoration: none;
       &:hover {
         background-color: $orange;
-      }
-
-      a {
-        text-decoration: none;
       }
 
       @media screen and (max-width: 375px) {

@@ -3,7 +3,7 @@
     <div class="intro-text">
       <h1>Nicole Sentis</h1>
       <h2>Frontend Developer</h2>
-      <button><a href="#portfolio">View my work</a></button>
+      <a class="cta-btn" href="#portfolio">View my work</a>
     </div>
   </div>
 </template>
@@ -55,7 +55,7 @@ $white: #f1f7f3;
       }
     }
 
-    button {
+    a {
       padding: 20px 45px;
 
       @media screen and (max-width: 600px) {

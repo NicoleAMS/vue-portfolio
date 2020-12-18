@@ -49,21 +49,23 @@ p {
   font-size: 18px;
 }
 
-button {
+.cta-btn {
   width: fit-content;
   margin-top: 30px;
-  background-color: $orange;
   border: none;
   font-size: 18px;
   font-family: "Titillium Web", sans-serif;
   text-transform: uppercase;
+  background-color: $orange;
+  text-decoration: none;
   &:hover {
     background-color: $dark;
   }
 
-  a {
-    text-decoration: none;
-  }
+  // a {
+  //   background-color: $orange;
+  //   text-decoration: none;
+  // }
 }
 
 .section-title {

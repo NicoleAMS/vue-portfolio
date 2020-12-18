@@ -16,7 +16,7 @@
             Development (front-end focus). I love learning, brainstorming and
             teamwork.
           </p>
-          <button><a href="#">Download my CV</a></button>
+          <a class="cta-btn" href="#">Download my CV</a>
         </div>
       </div>
     </div>
@@ -124,9 +124,10 @@ $midnight: #010a1c;
 
   p {
     width: 85%;
+    margin-bottom: 30px;
   }
 
-  button {
+  a {
     padding: 15px 30px;
   }
 }
