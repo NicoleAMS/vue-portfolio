@@ -1,5 +1,5 @@
 <template>
-  <div id="about-container">
+  <div id="about-me">
     <div class="about-row">
       <div class="about-left">
         <img src="../../assets/images/me.jpg" alt="" />
@@ -34,7 +34,7 @@ $darkgrey: #1a1a1a;
 $lightgrey: #c4beb5;
 $midnight: #010a1c;
 
-#about-container {
+#about-me {
   height: 100vh;
 
   @media screen and (max-width: 768px) {

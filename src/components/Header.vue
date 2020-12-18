@@ -1,11 +1,11 @@
 <template>
-  <div class="header-container">
+  <div class="header-container" :class="{bgDark: headerBG}">
     <nav class="capital desktop">
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#about-container">About Me</a></li>
-        <li><a href="#portfolio-container">Portfolio</a></li>
-        <li><a href="#contact-container">Contact</a></li>
+        <li><a href="#about-me">About Me</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
     <nav class="capital mobile">
@@ -17,9 +17,9 @@
       </div>
       <ul :class="{'menu-overlay': menuOverlay}" v-if="openClass" @click="toggleMenu()">
         <li><a href="#">Home</a></li>
-        <li><a href="#about-container">About Me</a></li>
-        <li><a href="#portfolio-container">Portfolio</a></li>
-        <li><a href="#contact-container">Contact</a></li>
+        <li><a href="#about-me">About Me</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -31,15 +31,25 @@ export default {
   data() {
     return {
       openClass: false,
-      menuOverlay: false
+      menuOverlay: false,
+      headerBG: false
     }
   },
   methods: {
     toggleMenu: function() {
       this.openClass = !this.openClass;
       this.menuOverlay = !this.menuOverlay;
+    },
+    onScroll: function() {
+      scrollY > 200 ? this.headerBG = true : this.headerBG = false;
     }
-  }
+  },
+  created() {
+    window.addEventListener('scroll', this.onScroll);
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.onScroll);
+  },
 };
 </script>
 
@@ -49,6 +59,10 @@ $white: #f1f7f3;
 $orange: #ffa46b;
 $aqua: #3c95a8;
 
+.bgDark {
+  background-color: $dark;
+}
+
 .header-container {
   position: fixed;
   display: flex;
@@ -56,7 +70,6 @@ $aqua: #3c95a8;
   align-items: center;
   width: 100%;
   height: 50px;
-  background-color: $dark;
   z-index: 100;
 
   ul {

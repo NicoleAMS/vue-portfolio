@@ -1,5 +1,5 @@
 <template>
-  <div id="portfolio-container">
+  <div id="portfolio">
     <h2 class="section-title">My Portfolio</h2>
     <div class="line"></div>
     <p class="portfolio-help">
@@ -59,7 +59,7 @@ $midnight: #010a1c;
 $dark: #081626;
 $white: #f1f7f3;
 
-#portfolio-container {
+#portfolio {
   padding: 100px 0 120px 0;
   background-color: $white;
 

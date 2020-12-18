@@ -1,5 +1,5 @@
 <template>
-  <div id="contact-container">
+  <div id="contact">
     <div class="contact-row">
       <div class="contact-left">
         <img src="../../assets/images/desk.jpg" alt="" />
@@ -54,7 +54,7 @@ $midnight: #010a1c;
 $dark: #081626;
 $white: #f1f7f3;
 
-#contact-container {
+#contact {
   height: 70vh;
 
   @media screen and (max-width: 768px) {

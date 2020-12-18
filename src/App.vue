@@ -32,6 +32,10 @@ $orange: #ffa46b;
   color: $white;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: $dark;
 }
