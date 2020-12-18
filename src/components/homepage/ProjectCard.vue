@@ -12,8 +12,8 @@
         <li v-for="skill in skills" :key="skill">{{ skill }}</li>
       </ul>
       <div class="overlay-buttons">
-        <a v-if="github !== ''" :href="`${github}`">View on GitHub</a>
-        <a v-if="link !== ''" :href="`${link}`">View live site</a>
+        <a v-if="github !== ''" :href="`${github}`" target="_blank">View on GitHub</a>
+        <a v-if="link !== ''" :href="`${link}`" target="_blank">View live site</a>
       </div>
     </div>
   </div>
