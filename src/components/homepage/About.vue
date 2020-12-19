@@ -16,7 +16,7 @@
             Development (front-end focus). I love learning, brainstorming and
             teamwork.
           </p>
-          <a class="cta-btn" href="#">Download my CV</a>
+          <a class="cta-btn" href="/assets/cv.pdf" download="cv_nicole_sentis.pdf">Download my CV</a>
         </div>
       </div>
     </div>
