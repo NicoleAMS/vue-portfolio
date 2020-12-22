@@ -23,12 +23,14 @@ $white: #f1f7f3;
 
 #intro-container {
   height: 100vh;
+  min-height: 600px;
   background-image: url("../../assets/images/background.png");
   background-size: cover;
   background-repeat: no-repeat;
 
   .intro-text {
     height: 100vh;
+    min-height: 600px;
     margin-left: 8%;
     display: flex;
     flex-direction: column;

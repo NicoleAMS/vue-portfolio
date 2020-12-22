@@ -115,6 +115,10 @@ $midnight: #010a1c;
     height: 500px;
   }
 
+  @media screen and (max-width: 320px) {
+    height: 550px;
+  }
+
   .line {
     width: 100%;
     height: 10px;

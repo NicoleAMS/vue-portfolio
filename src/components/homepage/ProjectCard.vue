@@ -94,12 +94,12 @@ $white: #f1f7f3;
       display: flex;
       justify-content: flex-end;
       flex-wrap: wrap;
-      margin-top: 20px;
+      margin-top: 15px;
     }
     li {
       color: $orange;
       display: inline;
-      margin-right: 20px;
+      margin-right: 15px;
       text-transform: uppercase;
     }
 
