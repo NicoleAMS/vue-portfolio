@@ -1,27 +1,36 @@
 <template>
-  <div class="header-container" :class="{bgDark: headerBG}">
-    <nav class="capital desktop">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#about-me">About Me</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <nav class="capital mobile">
-      <div class="icon" @click="toggleMenu()" :class="{open: openClass}">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <ul :class="{'menu-overlay': menuOverlay}" v-if="openClass" @click="toggleMenu()">
-        <li><a href="#">Home</a></li>
-        <li><a href="#about-me">About Me</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <div class="header-container" :class="{ bgDark: headerBG }">
+    <a href="#" class="logo-link"
+      ><img src="/assets/images/logo-aqua.png" alt="logo"
+    /></a>
+    <div class="nav-container">
+      <nav class="capital desktop">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about-me">About Me</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="capital mobile">
+        <div class="icon" @click="toggleMenu()" :class="{ open: openClass }">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul
+          :class="{ 'menu-overlay': menuOverlay }"
+          v-if="openClass"
+          @click="toggleMenu()"
+        >
+          <li><a href="#">Home</a></li>
+          <li><a href="#about-me">About Me</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </template>
 
@@ -32,8 +41,8 @@ export default {
     return {
       openClass: false,
       menuOverlay: false,
-      headerBG: false
-    }
+      headerBG: false,
+    };
   },
   methods: {
     toggleMenu: function() {
@@ -41,14 +50,14 @@ export default {
       this.menuOverlay = !this.menuOverlay;
     },
     onScroll: function() {
-      scrollY > 200 ? this.headerBG = true : this.headerBG = false;
-    }
+      scrollY > 200 ? (this.headerBG = true) : (this.headerBG = false);
+    },
   },
   created() {
-    window.addEventListener('scroll', this.onScroll);
+    window.addEventListener("scroll", this.onScroll);
   },
-  destroyed () {
-    window.removeEventListener('scroll', this.onScroll);
+  destroyed() {
+    window.removeEventListener("scroll", this.onScroll);
   },
 };
 </script>
@@ -64,13 +73,22 @@ $aqua: #3c95a8;
 }
 
 .header-container {
-  position: fixed;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
+  position: fixed;
   width: 100%;
-  height: 50px;
+  height: 55px;
   z-index: 100;
+
+  .logo-link {
+    height: 45px;
+    margin-left: 15px;
+
+    img {
+      height: 45px;
+    }
+  }
 
   ul {
     display: flex;
@@ -86,10 +104,10 @@ $aqua: #3c95a8;
 
   a {
     text-decoration: none;
-    &:hover, &:active {
+    &:hover,
+    &:active {
       color: $orange;
     }
-
   }
 
   .mobile {
@@ -195,10 +213,10 @@ $aqua: #3c95a8;
     box-shadow: -10px 0px 30px -15px $dark;
 
     li {
-    display: block;
-    font-size: 22px;
-    position: relative;
-    text-align: center;
+      display: block;
+      font-size: 22px;
+      position: relative;
+      text-align: center;
     }
   }
 }
