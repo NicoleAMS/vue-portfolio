@@ -1,6 +1,6 @@
 <template>
 <div class="footer">
-  <p>Designed & built by <a href="https://www.linkedin.com/in/nicolesentis/">Nicole Sentis</a></p>
+  <p>Designed & built by <a href="https://www.linkedin.com/in/nicolesentis/">Nicole Sentis</a> &#169; 2020</p>
 </div>
 </template>
 
