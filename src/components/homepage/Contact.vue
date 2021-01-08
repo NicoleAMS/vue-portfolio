@@ -56,6 +56,7 @@ $white: #f1f7f3;
 
 #contact {
   height: 70vh;
+  min-height: 600px;
 
   @media screen and (max-width: 768px) {
     height: auto;
