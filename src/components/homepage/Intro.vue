@@ -3,7 +3,6 @@
     <div id="stars" class="stars">
       <div class="star" v-for="n in number" :key="n" :id="n"></div>
     </div>
-    <!-- <div class="moon"></div> -->
     <div class="intro-text">
       <h1>Nicole Sentis</h1>
       <h2>Frontend Developer</h2>
@@ -120,17 +119,6 @@ $white: #f1f7f3;
         animation-delay: random(2) + s;    
       }
     }
-  }
-
-  .moon {
-    position: absolute;
-    top: 150px;
-    right: 150px;
-    width: 100px;
-    height: 100px;
-    background-color: transparent;
-    border-radius: 50%;
-    box-shadow: -30px 10px 0px 0px $white;
   }
 
   @keyframes twinkle {
