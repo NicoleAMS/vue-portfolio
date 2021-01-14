@@ -17,7 +17,24 @@ export default {
     Header,
     Footer,
     Homepage,
-  }
+  },
+  metaInfo: {
+    meta: [
+      {
+        name: "description",
+        content:
+          "Dutch frontend developer with 9 months of international work experience in both front-end and full-stack development. Based in The Netherlands. Loves learning, brainstorming, design and teamwork.",
+      },
+      { property: "og:title", content: "Nicole Sentis - Portfolio" },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://www.nicolesentis.nl/" },
+      {
+        property: "og:image",
+        content:
+          "https://www.nicolesentis.nl/assets/images/nicolesentis.nl/og.png",
+      },
+    ],
+  },
 };
 </script>
 
@@ -40,7 +57,8 @@ body {
   background: $dark;
 }
 
-h2, li {
+h2,
+li {
   font-family: "Titillium Web", sans-serif;
 }
 
